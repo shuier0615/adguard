@@ -235,28 +235,7 @@
 ||scorecardresearch.com^/beacon/
 ||addthis.com^/analytics/
 
-##自定义规则模板
-##.ad-banner
-##.ad-container
-##.ad-module
-##.ad-unit
-##.ad-wrapper
-##.ad-space
-##.ad-carousel
-##.ad-popup
-##.ad-modal
-||example.com/ad/*
-||example.com/ads/*
-||example.com/adsense/*
-||example.com/ads.txt
-~/ad[_-]?banner\d+.png  /ad[ 
-−
-​
- ]?interstitial\d+ 
-h
-˙
- tml~
-~/analytics[a-z0-9]+.js$~
+
 
 
 
