@@ -819,6 +819,59 @@ baidu.com##.dynamicshareAdbox
 
 
 
+#大圣净化
+# 广告服务核心域名屏蔽（通用型）
+||doubleclick.net^
+||ads.google.com^
+||s.facebook.com^
+||graph.facebook.com^
+||adm.baidu.com^
+||ecmb.bdimg.com^
+||adash.man.aliyuncs.com^
+||unidesk.alicdn.com^
+||i.w.inmobi.com^
+||youmi.net^
+||umeng.com^
+
+# 视频平台广告屏蔽（高频场景）
+||t.l.qq.com^          # 腾讯视频广告
+||ad.xiaomi.com^       # WeGame 广告
+||is.snssdk.com^       # 微视广告
+||api.cupid.iqiyi.com^ # 爱奇艺广告
+||cm.passport.iqiyi.com^
+||ggx.cmvideo.cn^      # 优酷/土豆广告
+||adxserver.ad.cmvideo.cn^
+||mobile.da.mgtv.com^  # 芒果TV广告
+||n.mark.letv.com^     # 乐视广告
+||de.as.cp61.ott.cibntv.net^  # PPTV广告
+
+# 社交/资讯平台广告屏蔽
+||wxsnsdy.wxs.qq.com^  # 微信广告
+||ad.qq.com^           # QQ广告
+||sina.com.cn^         # 新浪微博广告
+||163.com^             # 网易广告
+||toutiao.com^         # 头条系广告
+||xiaomi.m.cn.miaozhen.com^  # 小米广告
+
+# 工具类/追踪服务屏蔽
+||adblockdetect.com^   # 广告拦截检测
+||adguard.com^         # AdGuard 自身（防干扰）
+||cdn.bootcss.com^     # Bootstrap CDN（部分场景误封需注意）
+||res.weread.qq.com^   # 微信读书资源（误封案例）
+||security.miui.com^   # 小米安全中心（误封案例）
+
+# 游戏/直播平台广告屏蔽
+||ag.admaster.com.cn^  # 棋牌游戏广告
+||huya.com^            # 虎牙直播广告
+||douyu.com^           # 斗鱼直播广告
+||ad.qq.com^           # 应用宝广告
+||p.wandoujia.com^     # 豌豆荚广告
+
+# 动态广告补充规则（正则匹配）
+||*.admaster.com.cn^   # 广告主通用域名
+||*.mgtv.com^          # 省级卫视广告（如浙江、江苏卫视）
+||*.letv.com^          # 乐视系广告
+
 
 
 
