@@ -1,0 +1,73 @@
+1.EasyList:
+
+https://easylist-downloads.adblockplus.org/easylist.txt
+
+2.EasyList China
+
+https://easylist-downloads.adblockplus.org/easylistchina.txt
+3.EasyPrivacy
+
+https://easylist-downloads.adblockplus.org/easyprivacy.txt
+4.Anti-AD
+
+https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+
+https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-easylist.txt
+5.ADgk
+
+https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt
+
+https://cdn.jsdelivr.net/gh/banbendalao/ADgk@master/ADgk.txt
+
+6.百度搜索结果内屏蔽百家号 
+https://raw.githubusercontent.com/banbendalao/ADgk/master/kill-baidu-ad.txt
+
+https://cdn.jsdelivr.net/gh/banbendalao/ADgk@master/kill-baidu-ad.txt
+
+7.jiekouAD（酷安）
+https://cdn.jsdelivr.net/gh/damengzhu/banad/jiekouAD.txt
+
+8.知乎过滤器
+https://cdn.jsdelivr.net/gh/zsakvo/AdGuard-Custom-Rule@master/rule/zhihu.txt
+
+严格版 https://raw.githubusercontent.com/zsakvo/AdGuard-Custom-Rule/master/rule/zhihu-strict.txt
+
+https://cdn.jsdelivr.net/gh/zsakvo/AdGuard-Custom-Rule@master/rule/zhihu-strict.txt
+
+
+9.Hosts过滤器-----大圣净化 - 针对国内视频网站
+
+https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+
+
+10.1024_hosts - 1024网站和澳门皇家赌场
+
+https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts
+
+11.Google hosts - 提高网站访问速度
+
+https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts
+
+
+12.Mvps - 屏蔽美欧地区英文网站相关的广告
+
+http://winhelp2002.mvps.org/hosts.txt
+
+13.StevenBlack - 屏蔽国外网站广告-国外维护
+
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+14.yhosts - 屏蔽国内网站广告-国内维护
+
+https://raw.githubusercontent.com/vokins/yhosts/master/hosts
+
+
+15.YousList - 屏蔽韩国网站广告
+
+https://raw.githubusercontent.com/yous/YousList/master/hosts.txt
+
+16.DNSFilter
+
+https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list
+
+
