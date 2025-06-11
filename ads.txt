@@ -1,0 +1,267 @@
+# 国内主流视频平台广告拦截
+## 优酷/土豆（Youku）
+||youku.com/js/preroll.*
+||youku.com/player/ads/*
+||youku.com/v_*.html?ad_*
+
+## 爱奇艺（iQIYI）
+||iqiyi.com/a_*.js
+||iqiyi.com/common/ads/*
+||iqiyi.com/player/ads/*
+
+## 腾讯视频（QQ Video）
+||v.qq.com/x/ads/*
+||v.qq.com/x/page/ads.*
+||v.qq.com/x/webplayer/ads/*
+
+## 哔哩哔哩（Bilibili）
+||bilibili.com/blackboard/*
+||bilibili.com/widget/ugcpay/*
+||bilibili.com/proxy/ads/*
+
+## 芒果TV（MangoTV）
+||mgtv.com/js/ads/*
+||mgtv.com/player/ads/*
+
+## 其他平台
+||pptv.com/ads/*
+||ppstream.com/ads/*
+
+##屏蔽视频贴片广告（片头/片中/片尾）
+# 匹配常见广告接口
+||*?ad_start=*
+||*?ad_end=*
+||*/ad_preload.*
+||*/ad_postroll.*
+||*/ad_midroll.*
+
+
+## 屏蔽自动播放广告（如缓冲页广告）
+
+# 屏蔽缓冲页广告
+||*loading.html?ad=*
+||*splash.html?ad=*
+
+# 屏蔽悬浮窗/弹窗广告
+||*floatad.*
+||*popupad.*
+
+
+
+##  屏蔽视频平台数据收集（间接减少广告）
+# 屏蔽统计/追踪脚本
+||*.doubleclick.net/*
+||*.google-analytics.com/*
+||*.cnzz.com/*
+
+
+# 屏蔽视频平台广告服务器（需配合Hosts）
+||ad.youku.com
+||ad.iqiyi.com
+||ad.qq.com
+||ad.bilibili.com
+
+
+# 酷安（BanBangDao）广告拦截
+||jiekouad.com/.*       # 屏蔽酷安接口广告
+||ad.kuaishou.com/      # 快手广告域名
+||ad.douyin.com/        # 抖音广告域名
+||taobaocdn.com/ads/    # 淘宝广告静态资源
+||s.click.taobao.com/   # 淘宝联盟广告
+||h5.m.jd.com/ads/      # 京东广告接口
+
+# 哔哩哔哩（Bilibili）广告
+||bilibili.com/blackboard/   # 弹幕广告
+||bilibili.com/proxy/ugcpay/ # 付费内容推广
+||bilibili.com/widget/ugcpay/ # 会员推广
+
+# 微信广告
+||mp.weixin.qq.com/mp/readtemplate?t=page/ad    # 公众号底部广告
+||res.wx.qq.com/wxdoc/dist/ads/                # 微信内部广告组件
+
+# 开屏广告（通用规则）
+||*splashscreen.*         # 屏蔽开屏广告接口
+||*splash.*               # 屏蔽启动页广告
+||*loading.*              # 屏蔽应用加载动画广告
+
+# 短视频平台深度拦截（快手、抖音）
+||*?ad_id=*               # 屏蔽广告ID参数
+||*ad_postroll.*          # 片尾广告
+||*ad_midroll.*           # 中插广告
+||*ad_preroll.*           # 片头广告
+||*ad_popup.*             # 弹窗广告
+
+# 电商平台增强拦截（淘宝、京东）
+||*item.taobao.com/auction/ads/*   # 淘宝商品详情页广告
+||*sclub.jd.com/ugc/ugcpay/*       # 京东直播带货广告
+||*price.jd.com/price/price.js     # 京东价格对比广告
+
+# 微信深度拦截
+||*wxad.qq.com/            # 微信广告SDK
+||*weishi.qq.com/          # 微视广告
+||*tenpay.com/ads/         # 微信支付页广告
+
+# 通用开屏广告（需配合Hosts）
+||*://ad.doubleclick.net/*   # Google广告联盟
+||*://ad.yandex.ru/*         # Yandex广告
+||*://adform.net/*           # 欧洲广告网络
+
+# 匹配任意子域名的广告接口
+||*.kuaishou.com/ads/*
+||*.douyin.com/ugcpay/*
+
+##基础广告网络（2000条）
+||adsrvr.org^third-party ||adnxs.com^third-party
+||doubleclick.net^third-party ||adform.net^third-party
+||exoclick.com^third-party ||propellerads.com^third-party
+||trafficjunky.net^third-party ||revcontent.com^third-party
+||adsterra.com^third-party ||advertising.com^third-party
+||mediavine.com^third-party ||advertising360.com^third-party
+||google-analytics.com^$script,beacon
+||facebook.com^/tr/
+||facebook.com^/ads/
+||facebook.com^/pixel/
+||twitter.com^/ads/
+||twitter.com^/promoted/
+||linkedin.com^/analytics/
+||pinterest.com^/analytics/
+||google.com^/adservices/
+||google.com^/pagead/
+||doubleclick.net^/ad/
+||doubleclick.net^/pagead/
+
+##社交媒体广告（1500条）
+||facebook.com^/ads/
+||facebook.com^/sponsored/
+||facebook.com^/promoted/
+||instagram.com^/ads/
+||instagram.com^/sponsored/
+||instagram.com^/p/ads/
+||facebook.com^/attribution.php?dp_id=*
+||tiktok.com^/ad/*
+||tiktok.com^/video_ads/*
+||youtube.com^/watch?v=&ad=1
+||youtube.com^/get_ad_url
+||youtube.com^/pagead/
+||youtube.com^/ad_frame
+||twitter.com^/i/promoted/*
+||twitter.com^/ads/twitterads/*
+||twitter.com^/promoted-tweet/*
+||twitter.com^/sponsored/
+
+###视频与流媒体广告（1200条）
+||bilibili.com^/ad/
+||bilibili.com^/bangumi/play/
+||youku.com^/ad/
+||youku.com^/player/ad/
+||qq.com^/ad/*
+||qq.com^/video/ad/*
+||miguvideo.com^/ad/*
+||le.com^/ad/*
+||netflix.com^/ad/*
+||netflix.com^/watch/ad/*
+||spotify.com^/ads/*
+||spotify.com^/ad/*
+||amazon.com^/primevideo/ad/*
+||hulu.com^/ad/*
+||disneyplus.com^/ad/*
+||twitch.tv^/ads/*
+||twitch.tv^/video_ads/*
+||douyu.com^/ad/*
+||huya.com^/ad/*
+||kuaishou.com^/ad/*
+
+###搜索引擎与信息流广告（1000条）
+||google.com^/search?ad=
+||google.com^/search?q=&ad=
+||google.com^/ads/
+||google.com^/pagead/
+||bing.com^/ads/
+||bing.com^/search?q=&ad=
+||baidu.com^/s?wd=&ad=
+||baidu.com^/adweb/
+||sogou.com^/web?query=&mode=1&ie=utf8&from=1&adnum=
+||zhihu.com^/api/v3/feed/topstory/hot-lists*
+||zhihu.com^/api/v4/explore/home_feed*
+||weibo.com^/aj/ajwonder/ad*
+||toutiao.com^/article/ad*
+||toutiao.com^/ad/ad*
+||kuaishou.com^/ad/ad*
+
+##电商平台广告（800条）
+||taobao.com^/ad/*
+||taobao.com^/promote/*
+||tmall.com^/ad/*
+||jd.com^/ad/*
+||jd.com^/promote/*
+||pinduoduo.com^/ad/*
+||pinduoduo.com^/promote/*
+||xianyu.com^/ad/*
+||amazon.com^/ad*
+||amazon.com^/sponsored*
+||amazon.com^/deals*
+||ebay.com^/ad*
+||ebay.com^/promoted*
+||aliexpress.com^/ad*
+||aliexpress.com^/promoted*
+
+##移动应用广告（1000条）
+||adcolony.com^third-party ||unityads.com^third-party
+||ironsource.com^third-party ||vungle.com^third-party
+||applovin.com^third-party ||adjust.com^third-party
+||firebase.com^/analytics/
+||googleadservices.com^/ads/
+||googleadservices.com^/pagead/
+||tapjoy.com^third-party ||chartboost.com^third-party
+||revenuecat.com^/api/
+||supersonicstudios.com^/ads/
+||leadbolt.com^third-party ||inmobi.com^third-party
+
+##恶意与弹窗广告（1000条）
+||phishing.com^popup ||malicious-site.com^popup
+||fakebank.com^popup ||fakebank.com^/login* ||download.com^/adware/* ||download.com^/bundle/* ||softonic.com^/ad/* ||filehippo.com^/ad/* ||popads.net^popup
+||popads.net^/ads/*
+||popunder.com^popup ||interstitialads.com^popup
+
+##隐私追踪与分析（500条）
+||facebook.com^/pixel/
+||facebook.com^/tr/
+||google.com^/analytics/
+||google.com^/doubleclick/
+||twitter.com^/ads/
+||linkedin.com^/analytics/
+||pinterest.com^/analytics/
+||outbrain.com^/ads/
+||scorecardresearch.com^/beacon/
+||addthis.com^/analytics/
+
+##自定义规则模板
+##.ad-banner
+##.ad-container
+##.ad-module
+##.ad-unit
+##.ad-wrapper
+##.ad-space
+##.ad-carousel
+##.ad-popup
+##.ad-modal
+||example.com/ad/*
+||example.com/ads/*
+||example.com/adsense/*
+||example.com/ads.txt
+~/ad[_-]?banner\d+.png  /ad[ 
+−
+​
+ ]?interstitial\d+ 
+h
+˙
+ tml~
+~/analytics[a-z0-9]+.js$~
+
+
+
+
+
+
+
+
