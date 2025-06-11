@@ -757,7 +757,65 @@
 ||abb.lxiaoxin.com^
 ||abcd.c
 
+#百度搜索结果净化
+# 百度搜索结果极限净化（AdGuard增强版）
+# 2025/3/15 更新 | 支持动态广告/恶意SEO/冗余模块过滤
+# 适用场景：AdGuard浏览器扩展/AdGuard Home
 
+# ---------------------------
+# 基础广告过滤
+# ---------------------------
+baidu.com##div[class="feed-video-box"]
+baidu.com##div[class="wgt-exp-video"]
+baidu.com##div[tpl="vd"]
+baidu.com##div[tpl="video_box"]
+
+# ---------------------------
+# 动态广告拦截（正则优化）
+# ---------------------------
+baidu.com##div[class*="bannerad"]:has([href*="adclick"])
+baidu.com##div[id^="ad_"]:not([class*="official"]) 
+baidu.com##div[data-log~="(kxxzz|zhujicankao|yiyult)"]
+
+# ---------------------------
+# 恶意SEO防护（特征过滤）
+# ---------------------------
+baidu.com##div[data-log*="boce.com/"]:matches(-webkit-animation-duration)
+baidu.com##div[data-log*="fyddz.com.cn"]:has-css(background-color #FF0000)
+baidu.com##div[data-log*="cloud.tencent.com/developer/information/"]:has([onclick*="window.open"])
+
+# ---------------------------
+# 冗余模块清理（高效选择器）
+# ---------------------------
+baidu.com##div[tpl$="_video"]:empty
+baidu.com##div[tpl$="_audio"]:not([controls])
+baidu.com##div[tpl*="zl_"]:has([href*="zhanzhang.baidu.com"])
+
+# ---------------------------
+# 特殊场景防护（安全增强）
+# ---------------------------
+baidu.com##div[data-log*="openapi"]:has-text(/限时免费/)
+baidu.com##script[src*="baidu.com/s?wd="]:catch(error)
+
+# ---------------------------
+# 高级技巧（正则组合应用）
+# ---------------------------
+baidu.com##div[data-log~="^(kxxzz|dazhuanlan|mamicode)"]
+baidu.com##div[tpl*="wenda_"]:matches-text(/问答模板/)
+
+# ---------------------------
+# 性能优化（关键规则前置）
+# ---------------------------
+baidu.com##div[class*="feed-recommend"]
+baidu.com##div[class*="answer-entry"]
+baidu.com##div[class*="hot-recommend"]
+
+# ---------------------------
+# 兼容性保障（传统规则保留）
+# ---------------------------
+baidu.com##.header-act-entry
+baidu.com##.wgt-rel-exp.content-box
+baidu.com##.dynamicshareAdbox
 
 
 
