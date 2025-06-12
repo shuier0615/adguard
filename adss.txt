@@ -866,6 +866,70 @@ baidu.com##.dynamicshareAdbox
 ||*.mgtv.com^          # 省级卫视广告（如浙江、江苏卫视）
 ||*.letv.com^          # 乐视系广告
 
+# =============================================
+# 开屏广告拦截（应用启动时的全屏/插屏广告）
+# =============================================
+# 通用广告平台域名屏蔽（覆盖主流广告SDK）
+||*.admob.com^$document,subdocument       # Google AdMob（全球主流广告平台）
+||*.gdtimg.com^$document,subdocument      # 广点通（腾讯系广告）
+||*.tanx.com^$document,subdocument        # 淘宝联盟/阿里妈妈广告
+||*.inmobi.com^$document,subdocument      # InMobi（国际广告平台）
+||*.pubmatic.com^$document,subdocument    # PubMatic（广告交易平台）
+||*.unityads.com^$document,subdocument    # Unity Ads（游戏常用广告）
+||*.adcolony.com^$document,subdocument    # AdColony（视频广告平台）
+||*.applovin.com^$document,subdocument    # AppLovin（全球广告平台）
+||*.ironsource.com^$document,subdocument  # IronSource（聚合广告平台）
 
+# 国内视频/应用开屏广告特定路径
+||*.qq.com/splash/*$document              # 腾讯系应用（微信/QQ/腾讯视频）开屏广告
+||*.iqiyi.com/launchad/*$document         # 爱奇艺开屏广告
+||*.youku.com/startad/*$document          # 优酷开屏广告
+||*.douyin.com/launch/*$document          # 抖音/字节系应用开屏广告
+||*.xunlei.com/launch_ad/*$document       # 迅雷开屏广告
+
+# =============================================
+# 片头片尾广告拦截（视频播放前的贴片广告）
+# =============================================
+# 视频平台贴片广告路径屏蔽
+||*.iqiyi.com/ad_pre/*$document           # 爱奇艺前贴片广告
+||*.iqiyi.com/ad_post/*$document          # 爱奇艺后贴片广告
+||*.youku.com/vipad/pre/*$document        # 优酷VIP前贴片广告
+||*.tudou.com/pre-roll/*$document         # 土豆视频前贴片广告
+||*.letv.com/pcplayer/ad/videostart/*$document  # 乐视视频启动广告
+||*.bilibili.com/ad_video_start/*$document    # B站视频前贴片（部分）
+
+# =============================================
+# 弹窗广告拦截（页面浮层/诱导弹窗）
+# =============================================
+# 通用弹窗域名屏蔽
+||*.sogou.com/popad/*$document            # 搜狗搜索弹窗
+||*.so.com/popup/*$document               # 360搜索弹窗
+||*.baidu.com/dialog/*$document           # 百度搜索弹窗
+||*.2345.com/popup/*$document             # 2345浏览器弹窗
+||*.hao123.com/popup/*$document           # hao123导航弹窗
+
+# 通用元素隐藏（针对常见弹窗类名/ID）
+*##.ad-popup, .rewarded-popup, .interstitial-modal  # 通用弹窗容器
+*###ad-close-btn, #popup-close, .close-ad           # 弹窗关闭按钮（辅助隐藏）
+*##iframe[src*="ad"], iframe[src*="popup"]          # 广告iframe嵌套
+
+# =============================================
+# 小程序激励广告拦截（微信/支付宝小程序内）
+# =============================================
+# 微信小程序广告路径屏蔽
+||*.weixin.qq.com/ad_reward/*$document    # 微信小程序激励视频广告
+||*.weixin.qq.com/ad_interstitial/*$document # 微信小程序插屏广告
+||*.servicewechat.com/wx_fed/webview/*$document # 微信小程序WebView广告
+
+# 支付宝小程序广告路径屏蔽
+||*.alipay.com/ad_reward/*$document      # 支付宝小程序激励视频广告
+||*.alipay.com/ad_interstitial/*$document # 支付宝小程序插屏广告
+||*.alipayobjects.com/miniprogram/*$document # 支付宝小程序通用域名
+
+# =============================================
+# 补充规则（增强拦截效果）
+# =============================================
+$document,subdocument,other          # 对以上域名屏蔽所有资源加载（文档/子文档/其他）
+$important                           # 标记关键规则（避免被广告平台绕过）
 
 
