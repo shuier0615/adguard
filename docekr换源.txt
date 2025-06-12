@@ -1,0 +1,17 @@
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+    "registry-mirrors": [
+        "https://docker.m.daocloud.io",
+        "https://docker.imgdb.de",
+        "https://docker-0.unsee.tech",
+        "https://docker.hlmirror.com",
+        "https://docker.1ms.run",
+        "https://func.ink",
+        "https://registry.cn-guangzhou.aliyuncs.com",
+        "https://docker.xiaogenban1993.com"
+    ]
+}
+EOF
+
+
+systemctl daemon-reload && sudo systemctl restart docker
