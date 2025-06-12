@@ -35,9 +35,7 @@
 ||*/ad_postroll.*
 ||*/ad_midroll.*
 
-
 ## 屏蔽自动播放广告（如缓冲页广告）
-
 # 屏蔽缓冲页广告
 ||*loading.html?ad=*
 ||*splash.html?ad=*
@@ -46,21 +44,17 @@
 ||*floatad.*
 ||*popupad.*
 
-
-
 ##  屏蔽视频平台数据收集（间接减少广告）
 # 屏蔽统计/追踪脚本
 ||*.doubleclick.net/*
 ||*.google-analytics.com/*
 ||*.cnzz.com/*
 
-
 # 屏蔽视频平台广告服务器（需配合Hosts）
 ||ad.youku.com
 ||ad.iqiyi.com
 ||ad.qq.com
 ||ad.bilibili.com
-
 
 # 酷安（BanBangDao）广告拦截
 ||jiekouad.com/.*       # 屏蔽酷安接口广告
